@@ -29,6 +29,8 @@ class UserController extends Controller
 
             $user->setPassword($password);
 
+            var_dump($form);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
